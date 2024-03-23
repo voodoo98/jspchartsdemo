@@ -150,7 +150,7 @@ function drawPieChart(chartId, labels, data, colors, title) {
             },
             title: {
                 display: true,
-                fontSize: 16,
+                fontSize: 14,
                 text: title
             },
             legend: {

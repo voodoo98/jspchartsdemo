@@ -17,8 +17,8 @@
     <title>Charts</title>
 </head>
 <script>
-    getDailyLineChart('Daily LINE chart');
-    getDailyBarChart('Daily BAR chart');
+    getDailyLineChart('Daily Line chart');
+    getDailyBarChart('Daily Bar chart');
     getDailyPieChart('Daily Donut chart');
 </script>
 <body>

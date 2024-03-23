@@ -1,0 +1,71 @@
+plugins {
+	id 'java'
+	id 'org.springframework.boot' version '3.2.4'
+	id 'io.spring.dependency-management' version '1.1.4'
+	id 'idea'
+	id 'war'
+}
+
+group = 'com.example'
+version = '0.0.1-SNAPSHOT'
+
+java {
+	sourceCompatibility = '17'
+}
+
+configurations {
+	compileOnly {
+		extendsFrom annotationProcessor
+	}
+}
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	def lombokVersion = '1.18.30'
+
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+//	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+//	implementation 'org.springframework.boot:spring-boot-starter-security'
+	implementation 'org.springframework.boot:spring-boot-starter-validation'
+	implementation 'org.springframework.boot:spring-boot-starter-actuator'
+	providedRuntime 'org.springframework.boot:spring-boot-starter-tomcat'
+
+	implementation group: 'com.google.guava', name: 'guava', version: '32.1.3-jre'
+	implementation group: 'org.apache.commons', name: 'commons-lang3', version: '3.13.0'
+	implementation group: 'org.mapstruct', name: 'mapstruct', version: '1.5.5.Final'
+	implementation group: 'org.apache.commons', name: 'commons-text', version: '1.11.0'
+	implementation group: 'org.apache.commons', name: 'commons-collections4', version: '4.4'
+	implementation group: 'commons-io', name: 'commons-io', version: '2.15.0'
+	implementation group: 'com.mysql', name: 'mysql-connector-j', version: '8.2.0'
+
+	implementation 'org.ocpsoft.prettytime:prettytime:5.0.7.Final'
+
+	//jsp part, version upgrade: update the jsp, jspf files also
+	implementation 'org.webjars:bootstrap:5.1.3' //do not update
+	implementation 'org.webjars:font-awesome:6.4.2'
+	implementation 'org.webjars:jquery:3.7.1'
+	implementation "org.apache.tomcat.embed:tomcat-embed-jasper:10.1.17" //do not update
+	implementation group: 'org.glassfish.web', name: 'jakarta.servlet.jsp.jstl', version: '3.0.1'
+	implementation group: 'jakarta.servlet.jsp.jstl', name: 'jakarta.servlet.jsp.jstl-api', version: '3.0.0'
+
+	//lombok
+	compileOnly "org.projectlombok:lombok:${lombokVersion}"
+	annotationProcessor "org.projectlombok:lombok:${lombokVersion}"
+
+	annotationProcessor 'org.mapstruct:mapstruct-processor:1.5.5.Final'
+	testAnnotationProcessor 'org.mapstruct:mapstruct-processor:1.5.5.Final'
+
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	testImplementation 'org.springframework.security:spring-security-test'
+	testImplementation 'org.junit.platform:junit-platform-suite-api:1.9.3' //do not update
+	testImplementation 'org.junit.jupiter:junit-jupiter-migrationsupport:5.9.3' //do not update
+	testImplementation 'org.junit.jupiter:junit-jupiter-api:5.9.3' //do not update
+	testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.9.3' //do not update
+}
+
+tasks.named('test') {
+	useJUnitPlatform()
+}

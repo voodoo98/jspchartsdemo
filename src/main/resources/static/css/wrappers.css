@@ -1,0 +1,117 @@
+#content-desktop {display: block;}
+@media screen and (max-width: 1000px) {
+    #content-desktop {display: none;}
+}
+
+body {
+    /*background-color: #F5F5F5;*/
+    background-color: #6c757d;
+    font-family: 'Verala', sans-serif;
+    user-select: none; /* supported by Chrome and Opera */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+}
+
+.radiostyle {
+    background-color: #F2F2F2;
+    display: inline-flex;
+    align-items: center;
+}
+
+.card-body {
+    flex: 1 1 auto;
+    padding: 1rem 1rem;
+    background: whitesmoke;
+    border-radius: 5px 5px 0 0;
+}
+
+.addall-button {
+    background: white;
+}
+
+.addall-button:disabled {
+    background: white;
+}
+
+.series-table {
+    width: 101%;
+    margin-bottom: 1rem;
+    margin-left: -3px;
+    color: black;
+    vertical-align: top;
+    border-collapse: separate;
+    border-spacing: 2px;
+}
+
+.compare-table {
+    margin-bottom: 1rem;
+    margin-left: -3px;
+    color: black;
+    vertical-align: top;
+    border-collapse: separate;
+    border-spacing: 2px;
+}
+
+.td {
+    border: 1px solid black;
+    text-align: center;
+    vertical-align: middle;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    color: black;
+    width: 48px;
+    max-width: 48px;
+    border-radius: 2px;
+}
+
+.coverheader-td {
+    border: 1px solid black;
+    text-align: center;
+    vertical-align: middle;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    color: black;
+    border-radius: 2px;
+    background: white !important;
+}
+
+.turbo-table {
+    border: 1px solid #6c757d;
+    border-collapse: collapse;
+    border-radius: 5px 5px 0 0;
+    background: rgb(255,255,255);
+}
+
+.heading {
+    padding-bottom: 10px;
+    color: #303030;
+}
+
+.btn:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+.btn-outline-onetheway:hover, .btn-outline-onetheway:active, .btn-outline-onetheway:visited {
+    background-color: #c10db9 !important;
+    color: white;
+}
+
+.btn-outline-onetheway {
+    background-color: white !important;
+    color: #c10db9;
+    border-color: #c10db9;
+}
+
+.btn-onetheway:hover, .btn-onetheway:active, .btn-onetheway:visited {
+    background-color: #a40a9c !important;
+    color: white;
+}
+
+.btn-onetheway {
+    background-color: #c10db9 !important;
+    color: white;
+    border-color: #c10db9;
+}
